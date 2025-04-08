@@ -1,0 +1,28 @@
+.task-menu-container {
+    background-color: lightsalmon;
+    margin: 2rem;
+    padding: 1rem;
+    height: calc(100vh - 10rem);
+}
+.task-menu-head {
+    border-bottom: 2px solid black;
+}
+.task-menu-head h1 {
+    font-size: 1.5rem;
+}
+/* Grid */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+.div2 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+.div3 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 1;
+}

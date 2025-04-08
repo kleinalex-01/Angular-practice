@@ -1,7 +1,11 @@
 <nav>
-    <a routerLink="/about">About</a>
-    <a routerLink="/blog">Blog</a>
+    <div class="nav-container">
+        <h1>Task Manager</h1>
+        <a routerLink="/create-task" routerLinkActive="active">Create Task</a>
+        <a routerLink="/view-task" routerLinkActive="active">View Task</a>
+        <a routerLink="/update-task" routerLinkActive="active">Update Task</a>
+        <a routerLink="/delete-task" routerLinkActive="active">Delete Task</a>
+    </div>
 </nav>
-<hr>
 
-<router-outlet ></router-outlet>
+<router-outlet></router-outlet>

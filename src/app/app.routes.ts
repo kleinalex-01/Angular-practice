@@ -1,9 +1,16 @@
 import { Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { BlogComponent } from './blog/blog.component';
-import { AboutComponent } from './about/about.component';
+import { CreateTaskComponent } from './create-task/create-task.component';
+import { DeleteTaskComponent } from './delete-task/delete-task.component';
+import { UpdateTaskComponent } from './update-task/update-task.component';
+import { ViewTaskComponent } from './view-task/view-task.component';
+
 
 export const routes: Routes = [
-    {path: "about", component: AboutComponent},
-    {path: "blog", component: BlogComponent}
+    {path: "", component: AppComponent},
+    {path: "create-task", component: CreateTaskComponent},
+    {path: "view-task", component: ViewTaskComponent},
+    {path: "update-task", component: UpdateTaskComponent},
+    {path: "delete-task", component: DeleteTaskComponent},
+    {path: "**", component: AppComponent}
 ];
