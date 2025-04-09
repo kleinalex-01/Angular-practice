@@ -7,10 +7,8 @@ import { ViewTaskComponent } from './view-task/view-task.component';
 
 
 export const routes: Routes = [
-    {path: "", component: AppComponent},
     {path: "create-task", component: CreateTaskComponent},
     {path: "view-task", component: ViewTaskComponent},
     {path: "update-task", component: UpdateTaskComponent},
     {path: "delete-task", component: DeleteTaskComponent},
-    {path: "**", component: AppComponent}
 ];
