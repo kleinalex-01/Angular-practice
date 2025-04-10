@@ -3,14 +3,13 @@
         <h1>Create your daily tasks here.</h1>
     </div>
     
-    <input [(ngModel)]="newTaskTitle" placeholder="New task..."/>
-    <button (click)="addTask(newTaskTitle)">Add task!</button>
+    <input [(ngModel)]="newTaskTitle" placeholder="New task..." class="taskInput"/>
+    <button (click)="addTask(newTaskTitle)" class="taskBtn">Add task!</button>
 
     <div>
         <li *ngFor="let task of taskArr()" class="taskList">
             <p>{{task.id}}</p>
             <p>{{task.title}}</p>
-            <p>{{task.description}}</p>
             <p>{{task.completed}}</p>
         </li>
     </div>

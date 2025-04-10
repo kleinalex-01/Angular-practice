@@ -13,21 +13,19 @@ import { FormsModule } from '@angular/forms';
 })
 export class CreateTaskComponent {
   newTaskTitle: string = "";
-  taskArr = signal<Task[]>([
-    {id: 0, title: "test-title", description:"test-description", completed: false}
-  ])
-
+  taskArr = signal<Task[]>([])
 
   addTask(title: string) {
     if (!this.newTaskTitle) {
       alert("Please enter a task")
+      return
     }
-    title = this.newTaskTitle.trim()
+    title = title.trim();
+    const baseTaskId :number = 0;
+    const nextTaskId :number = this.taskArr().length > 0 ? this.taskArr()[this.taskArr().length - 1].id + 1 : 0;
     const newTask: Task = {
-      id: Date.now(),
+      id: nextTaskId,
       title: title,
-      description: title,
-      completed: false
     }
     this.taskArr.update((tasks) => [...tasks, newTask])
     this.newTaskTitle = "";
